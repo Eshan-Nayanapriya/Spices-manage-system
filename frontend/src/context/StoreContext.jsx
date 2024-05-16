@@ -1,3 +1,5 @@
+//StoreContexte
+
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
@@ -14,7 +16,7 @@ const StoreContextProvider = (props) => {
 
     const [food_list, setFoodList] = useState([]);
     const [promoList, setPromoList] = useState([]);
-    const [promoCode, setPromoCode] = useState(null); // State to store the applied promo code
+    const [promoCode, setPromoCode] = useState(null); 
     const [userId, setUserId] = useState("");
 
     useEffect(() => {
@@ -111,7 +113,7 @@ const StoreContextProvider = (props) => {
         setToken,
         userId,
         promoCode,
-        setPromoCode, // Include promoCode and setPromoCode in context value
+        setPromoCode,
     };
 
     return (

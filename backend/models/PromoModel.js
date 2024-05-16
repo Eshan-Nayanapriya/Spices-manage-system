@@ -1,5 +1,3 @@
-//PromoModel.js
-
 import mongoose from "mongoose";
 
 const promoSchema = new mongoose.Schema({

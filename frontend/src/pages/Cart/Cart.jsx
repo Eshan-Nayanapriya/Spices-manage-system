@@ -1,3 +1,5 @@
+//Cart.jsx
+
 import React, { useContext, useState } from 'react';
 import "./Cart.css";
 import { useNavigate } from 'react-router-dom';
@@ -8,6 +10,7 @@ const Cart = () => {
     const { cartItems, food_list, removeFromCart, getTotalCartAmount, promotion, url, setPromoCode } = useContext(StoreContext);
     const [promoCodeInput, setPromoCodeInput] = useState("");
     const [promoError, setPromoError] = useState("");
+    const [promoSuccess, setPromoSuccess] = useState(false); 
     const navigate = useNavigate();
 
     const handlePromoCodeSubmit = async () => {
@@ -17,6 +20,7 @@ const Cart = () => {
             if (promo) {
                 setPromoCode(promo.promocode);
                 setPromoError("");
+                setPromoSuccess(true); 
             } else {
                 setPromoError("Invalid promo code");
             }
@@ -96,6 +100,7 @@ const Cart = () => {
                             <button onClick={handlePromoCodeSubmit}>Submit</button>
                         </div>
                         {promoError && <p className="promo-error">{promoError}</p>}
+                        {promoSuccess && <p className="promo-success">Congratulations! Promo code applied successfully.</p>} 
                     </div>
                 </div>
             </div>

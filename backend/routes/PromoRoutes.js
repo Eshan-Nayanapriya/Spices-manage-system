@@ -1,5 +1,3 @@
-//PromoRoutes.js
-
 import express from "express";
 import { addPromo , getPromoCodes } from "../Controllers/PromoController.js";
 import { deletePromo } from "../Controllers/PromoController.js";

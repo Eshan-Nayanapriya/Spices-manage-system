@@ -1,5 +1,3 @@
-//PromoController.js
-
 import PromoModel from "../models/PromoModel.js";
 
 const addPromo = async (req, res) => {

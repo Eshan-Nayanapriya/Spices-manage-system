@@ -76,7 +76,6 @@ const Orders = ({ url }) => {
     }
   };
 
-  // New function to handle order deletion
   const deleteOrder = async (orderId) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this order?');
     if (!confirmDelete) {

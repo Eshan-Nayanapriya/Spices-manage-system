@@ -49,8 +49,8 @@ body {
     font-size: 1rem;
 }
 
-.add-btn{
-    margin-left: 14px;
+.refresh-btn{
+    width: 100px;
 }
 
 .add-promo-code .refresh-btn:hover, .btn-container .add-btn:hover {
